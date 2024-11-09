@@ -705,6 +705,37 @@ Install the project...
 
 # References
 
+### sudoer (adding path)
+
+If you want to run `bladeRF-cli` with `sudo` without specifying the full path, you’ll need to add `/usr/local/bin` to the `secure_path` in the `sudoers` file.
+
+Here’s how:
+
+1. **Edit the `sudoers` File**:
+   - Use `visudo`, the safe way to edit the `sudoers` file:
+     ```bash
+     sudo visudo
+     ```
+
+2. **Locate the `secure_path` Setting**:
+   - Find the line that starts with `Defaults secure_path`. It will look something like this:
+     ```bash
+     Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+     ```
+
+3. **Add `/usr/local/bin` to `secure_path`**:
+   - Modify the line to include `/usr/local/bin`:
+     ```bash
+     Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+     ```
+
+4. **Save and Exit**:
+   - After editing, save and close `visudo` (usually with `Ctrl+X` and then `Y` to confirm).
+
+Now, when you use `sudo bladeRF-cli -i`, it should work without needing the full path.
+
+### epel-release
+
 ```
 sudo yum install epel-release
 ```
