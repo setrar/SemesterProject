@@ -272,6 +272,29 @@ Submodule path 'thirdparty/analogdevicesinc/no-OS': checked out '0bba46e6f6f7578
 -- Build files have been written to: /home/bricer/Developer/bladeRF/host/build
 ```
 
+### Groups
+
+
+```
+$ groups
+```
+> bricer
+
+```
+sudo groupadd bladerf
+```
+
+```
+sudo usermod -a -G bladerf ${USER}
+```
+
+# Now log out and log back in...
+
+```
+$ groups
+```
+> bricer bladerf
+
 # References
 
 ```
