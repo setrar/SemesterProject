@@ -232,3 +232,29 @@ Upgraded:
 
 Complete!
 ```
+
+:x: This didn't work
+
+To install the bladeRF CLI (command-line interface) on Red Hat, follow these steps:
+	1.	Enable the EPEL Repository: Since the Extra Packages for Enterprise Linux (EPEL) repository may have dependencies for bladeRF, you may want to enable it:
+
+sudo yum install epel-release
+
+
+	2.	Download the Nuand Repository: Nuand provides pre-built packages for bladeRF on Red Hat and CentOS, so you can add the Nuand repository directly.
+
+sudo dnf config-manager --add-repo https://nuand.com/yum/el7/nuand.repo
+
+
+	3.	Install the bladeRF CLI:
+
+sudo dnf install bladerf
+
+
+	4.	Verify Installation: After installation, check if bladeRF CLI is working by typing:
+
+bladerf-cli -h
+
+
+
+If you encounter any missing dependencies or repository issues, you may need to install manually from the source or check the bladeRF documentation for specific Red Hat instructions.
