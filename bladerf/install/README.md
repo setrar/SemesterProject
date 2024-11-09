@@ -187,6 +187,91 @@ Upgraded:
 Complete!
 ```
 
+### [Building bladeRF libraries and tools from source](https://github.com/Nuand/bladeRF/wiki/Getting-Started%3A-Linux#building-bladerf-libraries-and-tools-from-source)
+
+```
+git clone https://github.com/Nuand/bladeRF.git ./bladeRF
+```
+> Returns
+```powershell
+Cloning into './bladeRF'...
+remote: Enumerating objects: 38305, done.
+remote: Counting objects: 100% (4712/4712), done.
+remote: Compressing objects: 100% (1576/1576), done.
+remote: Total 38305 (delta 3186), reused 4436 (delta 3016), pack-reused 33593 (from 1)
+Receiving objects: 100% (38305/38305), 13.02 MiB | 21.58 MiB/s, done.
+Resolving deltas: 100% (24168/24168), done.
+```
+
+cd host && mkdir build && cd build
+
+```
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DINSTALL_UDEV_RULES=ON ../
+```
+>Returns
+```powershell
+-- The C compiler identification is GNU 11.4.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.7.3") 
+-- Checking libusb version...
+-- libusb version: 1.0.26
+
+-- Looking for clock_gettime in c
+-- Looking for clock_gettime in c - found
+-- libad936x: Configuring build...
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- libad936x: Attempting to initialize missing submodule
+-- Found Git: /usr/bin/git (found version "2.39.3") 
+Submodule 'thirdparty/analogdevicesinc/no-OS' (https://github.com/analogdevicesinc/no-OS/) registered for path 'thirdparty/analogdevicesinc/no-OS'
+Cloning into '/home/bricer/Developer/bladeRF/thirdparty/analogdevicesinc/no-OS'...
+Submodule path 'thirdparty/analogdevicesinc/no-OS': checked out '0bba46e6f6f75785a65d425ece37d0a04daf6157'
+-- FindPatcher: found /usr/bin/patch
+-- libad936x: Applying patch: 0001-0bba46e-nuand-modifications.patch
+-- libad936x: Applying patch: 0002-0bba46e-pr-561.patch
+-- libad936x: Applying patch: 0003-0bba46e-pr-573.patch
+-- libad936x: Applying patch: 0004-0bba46e-pr-598.patch
+-- libad936x: Applying patch: 0005-0bba46e-rm-ad9361_parse_fir.patch
+-- libad936x: Applying patch: 0006-0bba46e-compilefix.patch
+-- libad936x: Build configured
+-- Checking libc version...
+-- libc version: 2.34
+
+--
+-- libbladeRF version: 2.5.1-git-fe3304d7
+-- libbladeRF_test: enabled
+-- The CXX compiler identification is GNU 11.4.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- nuand bladeRF udev rules will be installed to '/etc/udev/rules.d' upon running 'make install'
+--
+-- libtecla not found.
+-- libedit not found.
+-- Reusing existing interactive help for bladeRF-cli
+-- libtecla OFF FALSE
+-- libedit OFF FALSE
+-- Not building man page for bladeRF-cli. (BUILD_BLADERF_CLI_DOCUMENTATION is OFF)
+-- Configured to build bladeRF-cli version: 1.9.0-git-fe3304d7
+-- Looking for wsyncup in /usr/lib64/libcurses.so
+-- Looking for wsyncup in /usr/lib64/libcurses.so - found
+-- Looking for cbreak in /usr/lib64/libncursesw.so
+-- Looking for cbreak in /usr/lib64/libncursesw.so - found
+-- Looking for nodelay in /usr/lib64/libncursesw.so
+-- Looking for nodelay in /usr/lib64/libncursesw.so - found
+-- Found Curses: /usr/lib64/libncursesw.so  
+-- Configuring done (40.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/bricer/Developer/bladeRF/host/build
+```
+
 # References
 
 ```
