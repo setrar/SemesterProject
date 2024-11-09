@@ -4,7 +4,7 @@
 ### bladeRF CLI
 
 ```
-sudo /usr/local/bin/bladeRF-cli -i
+sudo bladeRF-cli -i
 ```
 > Returns
 ```powershell
@@ -12,6 +12,10 @@ sudo /usr/local/bin/bladeRF-cli -i
 [WARNING @ host/libraries/libbladeRF/src/board/bladerf2/bladerf2.c:462] Skipping further initialization...
 bladeRF>
 ```
+
+# References
+
+### nee sudo
 
 ```
 bladeRF-cli -i
