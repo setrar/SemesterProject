@@ -15,26 +15,6 @@ bladeRF>
 
 # References
 
-### nee sudo
-
-```
-bladeRF-cli -i
-```
-> Returns
-```powershell
-[WARNING @ host/libraries/libbladeRF/src/backend/usb/libusb.c:529] Found a bladeRF via VID/PID, but could not open it due to insufficient permissions.
-
-No bladeRF device(s) available.
-
-If one is attached, ensure it is not in use by another program
-and that the current user has permission to access it.
-
-bladeRF>
-```
-
-
-# References
-
 #### Help
 
 ```
@@ -84,4 +64,20 @@ Notes:
   When running 'rx/tx start' from a script or via -e, ensure these commands
   are later followed by 'rx/tx wait [timeout]' to ensure the program will
   not attempt to exit before reception/transmission is complete
+```
+#### need sudo
+
+```
+bladeRF-cli --interactive
+```
+> Returns
+```powershell
+[WARNING @ host/libraries/libbladeRF/src/backend/usb/libusb.c:529] Found a bladeRF via VID/PID, but could not open it due to insufficient permissions.
+
+No bladeRF device(s) available.
+
+If one is attached, ensure it is not in use by another program
+and that the current user has permission to access it.
+
+bladeRF>
 ```
