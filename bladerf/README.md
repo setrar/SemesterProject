@@ -4,7 +4,7 @@
 ### bladeRF CLI
 
 ```
-sudo bladeRF-cli -i
+sudo bladeRF-cli --interactive
 ```
 > Returns
 ```powershell
