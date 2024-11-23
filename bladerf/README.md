@@ -81,3 +81,22 @@ and that the current user has permission to access it.
 
 bladeRF>
 ```
+
+#### Check if board installed
+
+- [ ] On MAC :apple:
+
+```
+ioreg -p IOUSB
+```
+> Returns
+```powershell
++-o Root  <class IORegistryEntry, id 0x100000100, retain 28>
+  +-o AppleT8112USBXHCI@00000000  <class AppleT8112USBXHCI, id 0x1000003f2, registered, matched, active, busy 0 (13375 ms), retain 337>
+  +-o AppleT8112USBXHCI@01000000  <class AppleT8112USBXHCI, id 0x100000414, registered, matched, active, busy 0 (11797 ms), retain 139>
+    +-o USB3.0 Hub             @01200000  <class IOUSBHostDevice, id 0x10002d244, registered, matched, active, busy 0 (692 ms), retain 34>
+    | +-o USB3.0 Card Reader@01210000  <class IOUSBHostDevice, id 0x10002d26a, registered, matched, active, busy 0 (662 ms), retain 26>
+    | +-o bladeRF 2.0@01220000  <class IOUSBHostDevice, id 0x10002d26c, registered, matched, active, busy 0 (21 ms), retain 26>
+    +-o USB2.0 Hub             @01100000  <class IOUSBHostDevice, id 0x10002d257, registered, matched, active, busy 0 (75 ms), retain 35>
+      +-o Anker USB-C Hub Device @01150000  <class IOUSBHostDevice, id 0x10002d29e, registered, matched, active, busy 0 (39 ms), retain 22>
+```
