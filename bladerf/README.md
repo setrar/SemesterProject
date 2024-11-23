@@ -84,6 +84,8 @@ bladeRF>
 
 #### Check if board installed
 
+Observe: `bladeRF 2.0`
+
 - [ ] On MAC :apple:
 
 ```
@@ -99,4 +101,19 @@ ioreg -p IOUSB
     | +-o bladeRF 2.0@01220000  <class IOUSBHostDevice, id 0x10002d26c, registered, matched, active, busy 0 (21 ms), retain 26>
     +-o USB2.0 Hub             @01100000  <class IOUSBHostDevice, id 0x10002d257, registered, matched, active, busy 0 (75 ms), retain 35>
       +-o Anker USB-C Hub Device @01150000  <class IOUSBHostDevice, id 0x10002d29e, registered, matched, active, busy 0 (39 ms), retain 22>
+```
+
+- [ ] On Linux :penguin:
+
+```
+lsusb
+```
+> Returns
+```powershell
+Bus 002 Device 002: ID 2cf0:5250 Nuand LLC bladeRF 2.0 micro
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 1604:10c0 Tascam Dell Integrated Hub
+Bus 001 Device 003: ID 1604:10c0 Tascam Dell Integrated Hub
+Bus 001 Device 002: ID 1604:10c0 Tascam Dell Integrated Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
