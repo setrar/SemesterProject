@@ -1,3 +1,7 @@
+
+
+## Division of roles between the OAI PHY layer and the RF board
+
 When using **BladeRF** with **OpenAirInterface (OAI)**, the division of roles between the OAI PHY layer and the RF board (and specifically the FPGA on the RF board) is as follows:
 
 ---
