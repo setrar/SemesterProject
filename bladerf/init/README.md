@@ -71,6 +71,52 @@ bladeRF-cli --exec version
   FPGA version:               0.11.1 (configured by USB host)
 ```
 
+```
+bladeRF-cli --exec help
+```
+> Returns
+```powershell    
+ | Command name     | Description                                                               | Device | FPGA  |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | calibrate        | Perform transceiver and device calibrations                               |   Y    |   Y   |
+ | clear            | Clear the screen                                                          |        |       |
+ | echo             | Echo each argument on a new line                                          |        |       |
+ | erase            | Erase specified erase blocks of SPI flash                                 |   Y    |       |
+ | flash_backup     | Back up flash data to a file with metadata.                               |   Y    |       |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | flash_image      | Print a flash image's metadata or create a new flash image                |        |       |
+ | flash_init_cal   | Write new calibration data to a device or to a file                       |   Y    |       |
+ | flash_restore    | Restore flash data from a file                                            |   Y    |       |
+ | fw_log           | Read firmware log contents                                                |   Y    |       |
+ | generate         | Generates signals such as an offset CW                                    |        |       |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | help             | Provide information about specified command                               |        |       |
+ | info             | Print information about the currently opened device                       |   Y    |       |
+ | jump_to_boot     | Clear FW signature in flash and jump to FX3 bootloader                    |   Y    |       |
+ | load             | Load FPGA or FX3                                                          |   Y    |       |
+ | mimo             | Modify device MIMO operation                                              |   Y    |   Y   |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | open             | Open a bladeRF device                                                     |        |       |
+ | peek             | Peek a memory location                                                    |   Y    |   Y   |
+ | poke             | Poke a memory location                                                    |   Y    |   Y   |
+ | print            | Print information about the device                                        |   Y    |   Y   |
+ | probe            | List attached bladeRF devices                                             |        |       |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | quit             | Exit the CLI                                                              |        |       |
+ | recover          | Load firmware when operating in FX3 bootloader mode                       |        |       |
+ | run              | Run a script                                                              |        |       |
+ | rx               | Receive IQ samples                                                        |   Y    |   Y   |
+ | set              | Set device settings                                                       |   Y    |   Y   |
+ |------------------+---------------------------------------------------------------------------+--------+-------|
+ | trigger          | Control triggering                                                        |   Y    |   Y   |
+ | tx               | Transmit IQ samples                                                       |   Y    |   Y   |
+ | version          | Host software and device version information                              |        |       |
+ | xb               | Enable and configure expansion boards                                     |   Y    |   Y   |
+
+The letter Y in the "Device" and "FPGA" columns indicates the command
+  needs the device to open, and the FPGA to be loaded, respectively.
+```
+
 # References
 
 The `bladeRF-cli` is a command-line interface tool for interacting with the bladeRF Software Defined Radio. It allows users to perform tasks like updating firmware, loading FPGA bitstreams, configuring the radio, and running diagnostics.
