@@ -73,21 +73,3 @@ To locate these files in the repository:
 -	Transmit Path Logic: Navigate to the [`hdl/fpga/platforms/bladerf-micro/vhdl/`](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl) directory to find [tx.vhd](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl/tx.vhd).
 
 These files collectively implement the upsampling functionality in the bladeRF micro x4’s FPGA design.
-
-In the bladeRF micro x4, the FPGA handles the upsampling of IQ samples during transmission. The upsampling process is implemented within the FPGA's HDL (Hardware Description Language) code. Specifically, the upsampling functionality is part of the transmit (TX) path, which includes interpolation filters to increase the sample rate of the baseband IQ signals to match the requirements of the RF front-end.
-
-The top-level VHDL file for the bladeRF micro x4 is `bladerf.vhd`, located in the [bladeRF GitHub repository](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl/bladerf.vhd). This file defines the overall architecture and interconnections of the FPGA components. Within this architecture, the transmit path includes modules responsible for upsampling.
-
-The specific modules and their corresponding VHDL files that handle upsampling are:
-
-1. **Interpolation Filters**: These filters increase the sample rate of the input IQ data. The VHDL code for these filters is located in the `fir_filter.vhd` file within the `nuand` IP directory.
-
-2. **Transmit Path Logic**: The overall transmit path, including the integration of interpolation filters, is defined in the `tx.vhd` file.
-
-To locate these files in the repository:
-
-- **Interpolation Filters**: Navigate to the `hdl/fpga/ip/nuand/synthesis/` directory to find `fir_filter.vhd`.
-
-- **Transmit Path Logic**: Navigate to the `hdl/fpga/platforms/bladerf-micro/vhdl/` directory to find `tx.vhd`.
-
-These files collectively implement the upsampling functionality in the bladeRF micro x4's FPGA design. 
