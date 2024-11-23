@@ -84,7 +84,7 @@ bladeRF-cli --exec help
  | erase            | Erase specified erase blocks of SPI flash                                 |   Y    |       |
  | flash_backup     | Back up flash data to a file with metadata.                               |   Y    |       |
  |------------------+---------------------------------------------------------------------------+--------+-------|
- | flash_image      | Print a flash image\'s metadata or create a new flash image                |        |       |
+ | flash_image      | Print a flash image"s metadata or create a new flash image                |        |       |
  | flash_init_cal   | Write new calibration data to a device or to a file                       |   Y    |       |
  | flash_restore    | Restore flash data from a file                                            |   Y    |       |
  | fw_log           | Read firmware log contents                                                |   Y    |       |
