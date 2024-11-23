@@ -69,8 +69,8 @@ The specific modules and their corresponding VHDL files that handle upsampling a
 2.	Transmit Path Logic: The overall transmit path, including the integration of interpolation filters, is defined in the tx.vhd file.
 
 To locate these files in the repository:
--	Interpolation Filters: Navigate to the [`hdl/fpga/ip/nuand/synthesis/`](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/ip/nuand/synthesis) directory to find fir_filter.vhd.
--	Transmit Path Logic: Navigate to the [`hdl/fpga/platforms/bladerf-micro/vhdl/`](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl) directory to find tx.vhd.
+-	Interpolation Filters: Navigate to the [`hdl/fpga/ip/nuand/synthesis/`](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/ip/nuand/synthesis) directory to find [fir_filter.vhd](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/ip/nuand/synthesis/fir_filter.vhd).
+-	Transmit Path Logic: Navigate to the [`hdl/fpga/platforms/bladerf-micro/vhdl/`](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl) directory to find [tx.vhd](https://github.com/Nuand/bladeRF/blob/master/hdl/fpga/platforms/bladerf-micro/vhdl/tx.vhd).
 
 These files collectively implement the upsampling functionality in the bladeRF micro x4’s FPGA design.
 
